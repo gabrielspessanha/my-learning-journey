@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container { 
+  background-color: darkgray;
+  min-height: 100vh;
+  display: flex;
+  row-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ .item1,.item2,.item3{
+  width:200px;
+  height: 200px;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

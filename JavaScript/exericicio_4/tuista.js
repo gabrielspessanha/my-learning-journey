@@ -5,4 +5,4 @@ while (resp === "sim"){
   cidade.push(prompt("qual o nome da cidade?"))
   resp = prompt("ja visitou alguma outra cidade? [sim/nao]")
 }
-alert(`${nome}: Visitou ${cidade.length} cidades`)
+alert(`${nome}: Visitou ${cidade.length} cidades e foram elas ${cidade}`)

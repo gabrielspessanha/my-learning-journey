@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  background-color: bisque;
+  height: 100vh;
+  padding: 40px;
+}
+#content header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+#content header button {
+  padding: 10px;
+  font-size: 1.1em;
+}
+#content header input, #content header label {
+  width: 200px;
+  font-size: 1em;
+}
+
+.vezJogador {
+  display: flex;
+  border: 3px solid greenyellow;
+  padding: 30px;
+}
+
+main {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: nowrap;
+  flex-basis: 200px;
+  background: white;
+}
+main .box {
+  border: 1px solid;
+  width: 120px;
+  height: 120px;
+}
+
+.actived1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/imagens/circle.png);
+  background-size: cover;
+}
+
+.actived2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/imagens/x.png);
+  background-size: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

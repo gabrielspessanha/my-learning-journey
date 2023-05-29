@@ -3,29 +3,30 @@ const player1 = document.getElementById('player1')
 const player2 = document.getElementById('player2')
 var h2 = document.getElementById('vezJogador')
 
+function winner(){
+  const bx1 = document.getElementsByClassName('box1')
+  if (bx1.id){
+    alert('parece que funcionou')
+  }
+}
 
 function boxClicked(ev){
   const box = ev.currentTarget
-  console.log('fiiimmmmmmm')
+  if(box.value === 'checked'){
+    alert('botão já clicado')
+    return
+  }
   if (h2.innerText === 'Jogador: ' + player1.value){
-    if(box.value === true){
-      alert('botão já clicado')
-      return
-    }
     box.classList.add('actived1')
-    box.value = true
+    box.value = 'checked'
     box.pointerEvents = 'none'
     h2.innerText = 'Jogador: ' + player2.value
     return
   }
     
   if(h2.innerText === 'Jogador: ' + player2.value){
-    if(box.value === true){
-      alert('botão já clicado')
-      return
-    }
     box.classList.add('actived2')
-    box.value = true
+    box.value = 'checked'
     box.pointerEvents = 'none'
     h2.innerText = 'Jogador: ' + player1.value
     return
@@ -34,14 +35,16 @@ function boxClicked(ev){
 
 
 document.getElementById('start').addEventListener('click', function(){
-  h2.innerText = 'Jogador: ' + player1.value
-  h2.classList.add('vezJogador')
+  if (player1.value === '' || player2.value === ''){
+    alert('nomes invalidos')
+  }else{
+    h2.innerText = 'Jogador: ' + player1.value
+    h2.classList.add('vezJogador')
 
-  document.querySelectorAll('.box').forEach(function(elemento){
+    document.querySelectorAll('.box').forEach(function(elemento){
     elemento.addEventListener('click', boxClicked)
-    
-  })
-  
+      })
+    }
   }
 )
 

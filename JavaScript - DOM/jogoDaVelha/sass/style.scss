@@ -39,8 +39,11 @@
 
 .vezJogador{
   display: flex;
-  border: 3px solid greenyellow;
+  color: rgb(0, 0, 0);
   padding: 30px;
+  background-color: rgba(255, 255, 255, 0.144);
+  backdrop-filter: blur(40px);
+  box-shadow: 0px 10px 5px rgba(231, 183, 80, 0.5);
 }
 
 main{
@@ -49,27 +52,20 @@ main{
   grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: nowrap;
   flex-basis: 200px;
-  background: white;
 
   .box{
     border: 1px solid;
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
   }
 }
 
 .actived1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url(/imagens/circle.png);
   background-size: cover;
 }
 
 .actived2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url(/imagens/x.png);
   background-size: cover;
 

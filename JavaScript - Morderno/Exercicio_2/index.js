@@ -1,21 +1,19 @@
- 
+const dayjs = require("dayjs")
 
-function birthDay(...{day,month,year}){
-  const dayjs = require("dayjs")
-  const datejs = require('dayjs/locale/pt-br.js')
 
-  dayjs().locale(datejs).format('DD/MM/YYYY')
+function birthDay(date){
+  const birthday = dayjs(date)
+  const today = dayjs()
 
-  return dayjs({
-    year,
-    month,
-    day,
-  })
-  //return dayjs(date).locale(datejs).format('DD/MM/YYYY')
+  const ageInYears = today.diff(birthday, 'year')
+  const nextBirthDay = birthday.add(ageInYears+1,'year')
+  const daysToNextBirthday = nextBirthDay.diff(today, 'day') + 1
+
+  console.log(`Idade: ${ageInYears}`)
+  console.log(`A sua proxima data de aniversario é : ${nextBirthDay.format('DD/MM/YYYY')}`)
+  console.log(`Dias até completar ${ageInYears +1} anos: ${daysToNextBirthday}` )
 }
 
-const day = '23'
-const month = '02'
-const year = '2003'
 
-console.log(birthDay(day,month,year))
+
+birthDay(`2003-02-23`)

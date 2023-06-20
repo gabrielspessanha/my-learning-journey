@@ -1,0 +1,1 @@
+(()=>{const e=requite("dayjs");alert("Hoje é: "+e().format("DD/MM/YYYY"))})();

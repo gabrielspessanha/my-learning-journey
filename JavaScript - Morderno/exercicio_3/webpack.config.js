@@ -1,24 +1,25 @@
+const path = require('path')
+module.exports ={
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist')
+    }
+  },
 
-module.exports = {
   entry: {
-    main: './src/index.js'
+    index: './src/index.js'
   },
-  mode: 'development',
-  output: {
-    filename: '[name].js'
-  },
+  mode: 'production',
   module: {
     rules: [{
-      test: /\.m?js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets:[
-            ['@babel/preset-env', {targets: "defaults"}]
-          ]
-        }
-      }
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }, {
+      test: /\.js$/,
+      use: ['babel-loader']
     }]
+  },
+  output: {
+    filename: '[name].min.js'
   }
 }

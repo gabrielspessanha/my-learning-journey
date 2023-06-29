@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

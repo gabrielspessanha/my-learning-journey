@@ -1,17 +1,17 @@
-module.exports = class Order{
+module.exports = class Order {
   #total
   #items
   #user
 
-  constructor(items, user){
-    items.forEach(({ product, quantity })=>{
-      if (quantity > product.inStock){
+  constructor(items, user) {
+    items.forEach(({ product, quantity }) => {
+      if (quantity > product.inStock) {
         throw new Error('Quantidade insuficiente em estoque!')
       }
     })
-    this.#items = items 
+    this.#items = items
     this.#user = user
-    this.#total = items.reduce((sum,{product, quantity})=> sum +(product.price*quantity),0)
+    this.#total = items.reduce((sum, { product, quantity }) => sum + (product.price * quantity), 0)
   }
 
   get data() {

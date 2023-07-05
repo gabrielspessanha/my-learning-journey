@@ -11,6 +11,6 @@ module.exports = class Product{
   }
 
   removeFromStock(quantity){
-    this.inStock += quantity
+    this.inStock -= quantity
   }
 }

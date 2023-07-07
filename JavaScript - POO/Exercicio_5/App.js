@@ -1,7 +1,7 @@
 const Loan = require("./inerites/Loan")
 const User = require("./inerites/User")
 
-class App{
+module.exports = class App{
   static #listOfUsers = []
 
 
@@ -20,19 +20,29 @@ class App{
     }
   }
   static newDeposit(value, email){
-    const userDeposit = App.getUserByEmail(email)
-    userDeposit.account.newDeposit(value)
-    console.log('Deposito Realizado com Sucesso')
+    const user = App.getUserByEmail(email)
+    if (user){
+      user.account.newDeposit(value)
+      console.log('Deposito Realizado com Sucesso')
+    }
   }
+
   static newTransfer(value, email, emailDestiny ){
-    const userTransferSent = App.getUserByEmail(email)
-    const userTransferReceived = App.getUserByEmail(emailDestiny)
-    userTransferSent.account.newTransfer(userTransferSent,userTransferReceived,value)
+    const fromUser = App.getUserByEmail(email)
+    const toUser = App.getUserByEmail(emailDestiny)
+    if (fromUser && toUser){
+      fromUser.account.newTransfer(fromUser,toUser,value)
+    }else{
+      console.log('Usuario informado está incorreto')
+    }
   }
 
   static newLoan(value,installment,email){
     const userLoan = App.getUserByEmail(email)
-    userLoan.account.newLoan(value,installment)
+    if (userLoan){
+      userLoan.account.newLoan(value,installment)
+    }
+    
   }
 
   static newFess(newFees){
@@ -53,11 +63,3 @@ class App{
   }
 }
 
-App.newUser('gabriel','gabriel@gmail.com')
-App.newUser('gabrielle','gabrielle@gmail.com')
-App.newDeposit(500,'gabriel@gmail.com')
-App.newTransfer(300,'gabriel@gmail.com','gabrielle@gmail.com')
-App.newFess(2.5)
-
-const useDefault = App.getUser('gabriel@gmail.com')
-console.log(useDefault.account.balance)

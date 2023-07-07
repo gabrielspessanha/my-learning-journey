@@ -33,6 +33,7 @@ module.exports = class Account {
         this.#balance -= value
         userReceived.account.newDeposit(value)
         this.allTransfers.push(transfer)
+        userReceived.account.incomingTransfers.push(transfer)
         console.log("Transferência realizada com sucesso!")
       }else{
         console.log('Sem saldo')
@@ -41,6 +42,7 @@ module.exports = class Account {
       const transfer = new Transfer(userSent,userReceived,value)
       this.#balance += value
       this.allTransfers.push(transfer)
+      userReceived.account.incomingTransfers.push(transfer)
       console.log("Transferência recebida com sucesso!");
     }else{
       console.log('Usuario Não existe')

@@ -2,7 +2,7 @@ const Deposit = require("./Deposit")
 const Installments = require("./Installments")
 
 module.exports = class Loan{
-  static #fees = 1.4
+  static #fees = 1.05
   constructor(loanValue,numberInstallments){
     this.loanValue = loanValue
     this.creationDate = Deposit.getCurrentDate()
@@ -10,11 +10,11 @@ module.exports = class Loan{
   }
 
   calculteInstallmente(numberInstallments){
-    const valueInstall = (this.loanValue / numberInstallments)* Loan.#fees
+    const valueInstall = (this.loanValue * Loan.#fees)/numberInstallments
     const install = []
 
-    for (let i = 0; i< numberInstallments; i++){
-      install.push(new Installments(valueInstall,i+1))
+    for (let i = 1; i<= numberInstallments; i++){
+      install.push(new Installments(valueInstall,i))
     }
     return install
   }
@@ -24,7 +24,7 @@ module.exports = class Loan{
   }
 
   static set fees(newfees){
-    Loan.#fees = newfees 
+    Loan.#fees = 1 + (newfees / 100)
   }
 
 }

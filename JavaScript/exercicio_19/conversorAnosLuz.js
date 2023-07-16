@@ -18,7 +18,7 @@ const option= showMenu()
 switch(option){
   case 1 :
      choice = "Parsec"
-     const distanceInPc = distanceLightYears / 0.306601
+     const distanceInPc = distanceLightYears * 0.306601
     showMenu2(choice,distanceInPc)
     break
   case 2: 

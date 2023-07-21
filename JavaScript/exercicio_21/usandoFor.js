@@ -9,6 +9,6 @@ for (let i in shipName){
   }else{
     newName+=shipName[i]
   }
-}
 
+}
 alert("Novo nome da nave: "+ newName)

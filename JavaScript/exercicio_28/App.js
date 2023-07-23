@@ -7,10 +7,7 @@ class App{
       new Imoveis("Casa",area,rented)
     }else if(house === "Apartamento"){
       new Imoveis("Apartamento",area,rented)
-    }else{
-      alert("Tipo de apartamento invalido! ")
-      return
-    }
+    }//212222222222222
   }
 }
  

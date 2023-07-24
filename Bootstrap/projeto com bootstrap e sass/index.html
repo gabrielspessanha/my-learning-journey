@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criando uma Landing Page com Bootstrap</title>
+  <!--Colocando bootStrap no css-->
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="img-fluid">
+  <img src="./images/backgroundLp.png" class="img-fluid "></img>
+
+  <div class="container">
+
+    <div class="card-main row card p-4"> 
+      <img src="./images/logoOneBitDark.png" class="col coll card-img-top" alt="logoOneBitCode">
+      <div class="card-body mt-4">
+        <form class="py-5">
+
+          <!-- ----------------OPÇÂO 1---------------- -->
+          <label for="formName" class="form-label col coll ">1- Qual é o seu nome? </label>
+          <div class="input-group mb-3 col coll" >
+            <span class="input-group-text">Primeiro nome:</span>
+            <input type="text" class="form-control" id="formName" >
+          </div>
+          <div class="input-group mb-3 col coll" >
+            <span class="input-group-text">Segundo nome:</span>
+            <input type="text" class="form-control" id="formName" >
+          </div>
+
+          <!-- ----------------OPÇÂO 2---------------- -->
+          <label for="gender" class="form-label">2- Qual é o seu gênero?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="checkGender" id="checkGenderMan">
+            <label for="checkGenderMan" class="form-check-label">Homem</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="checkGender" id="checkGenderWoman">
+            <label for="checkGenderWoman" class="form-check-label">Mulher</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="checkGender" id="checkGenderOther">
+            <label for="checkGenderOther" class="form-check-label">Prefiro não responder</label>
+          </div>
+
+          <!-- ----------------OPÇÂO 3---------------- -->
+          <label class="form-label">3-Marque os treinamentos que você fez: </label>
+          <div class="form-check form-swtich">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDefault">
+            <label>Treinamento básico de astronauta</label>
+          </div>
+
+          <div class="form-check form-swtich">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDefault">
+            <label>Treinamento físico básico</label>
+          </div>
+
+          <div class="form-check form-swtich">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDefault">
+            <label>Treinamento avançado de astronauta</label>
+          </div>
+
+          <div class="form-check form-swtich">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDefault">
+            <label>Treinamento físico intenso</label>
+          </div>
+
+          <!-- ----------------OPÇÂO 4---------------- -->
+
+        </form>
+        
+
+      </div>
+      
+    </div>
+  </div>
+  
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

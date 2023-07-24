@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+body img{
+  position: absolute;
+  z-index: -1;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.card-main{
+  position: relative;
+  z-index: 1;
+  background-color: #ca1212f1;
+}

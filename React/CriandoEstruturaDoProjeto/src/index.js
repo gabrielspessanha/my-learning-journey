@@ -1,5 +1,6 @@
-const user = {
-  name: 'Gabriel',
-}
+import React from "react";
+React;
 
-console.log(user.address?.street)
+function App() {
+  return <h1>Hello world</h1>;
+}

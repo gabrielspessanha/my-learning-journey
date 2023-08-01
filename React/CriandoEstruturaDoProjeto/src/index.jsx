@@ -1,6 +1,3 @@
 import React from "react";
-React;
+import { app } from './App'
 
-function App() {
-  return <h1>Hello world</h1>;
-}

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 function App() {
   return (
-    <>
       <div className="container">
         <img src="/react.png" alt="" width="100px"/>
         <h1>React</h1>
@@ -28,7 +27,6 @@ function App() {
         </ul>
 
       </div>
-    </>
   )
 }
 

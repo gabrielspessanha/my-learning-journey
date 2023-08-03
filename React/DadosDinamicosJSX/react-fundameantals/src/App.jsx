@@ -1,12 +1,16 @@
 
+import StatusText from "./components/StatusText"
+import Title from "./components/Title"
+import { Subtitle } from "./components/Subtitle"
+
 export default function App() {
-  const tech = 'React'
-  const status = true
+  
+
   return (
       <div>
-        <h1>{tech} is Awesome</h1>
-        <h2>it's easy, like 1 + 1 is {true}</h2>
-        <h2>Current status: {status? "ON": "OFF"}</h2>
+        <Title/>
+        <Subtitle />
+        <StatusText />
       </div>
   )
 }

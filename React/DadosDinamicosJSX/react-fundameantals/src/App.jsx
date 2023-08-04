@@ -11,7 +11,6 @@ export default function App() {
 
   return (
       <div className={stats? styles.appOn:styles.appOff}>
-        <Button/>
         <Title/>
         <Subtitle/>
         <StatusText />

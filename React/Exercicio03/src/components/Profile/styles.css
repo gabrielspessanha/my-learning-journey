@@ -1,0 +1,21 @@
+.Profile-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+p,h3{
+  border-bottom: 1px solid  rgb(0, 137, 201);
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+img{
+  margin-top: 1rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -1,0 +1,30 @@
+.ProfileCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+
+img{
+  margin-top: 1rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.followButton{
+  margin-left: 1rem;
+  padding: .125rem .5rem;
+  background-color: rgb(0, 137, 201);
+  color: white;
+}
+
+.unfollowButton{
+  margin-left: 1rem;
+  padding: .125rem .5rem;
+  background-color: rgb(255, 0, 0);
+  color: white;
+}

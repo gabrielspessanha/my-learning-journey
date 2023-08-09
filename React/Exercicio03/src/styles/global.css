@@ -9,6 +9,6 @@
   background-color: rgb(0, 137, 201);
   height: 100vh;
   display: flex;
-  justify-content: center;
+  place-content: center;
   align-items: center;
 }

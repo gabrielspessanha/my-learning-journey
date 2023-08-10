@@ -1,0 +1,16 @@
+.card{
+  display: grid;
+  place-content: center;
+  width: 500px;
+  padding: 2rem;
+  color: #ffff;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows:2fr 0.3fr 0.5fr;
+  grid-template-areas: 
+    "h1 h1"
+  ;
+  gap: 20px;
+}
+h1{
+  grid-area: h1;
+}

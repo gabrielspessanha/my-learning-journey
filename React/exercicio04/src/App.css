@@ -1,0 +1,12 @@
+.App{
+  text-align: center;
+  background-color: rgb(58, 58, 58);
+}
+
+button{
+  height: 30px;
+}
+
+.key{
+  border: 1px solid blue;
+}

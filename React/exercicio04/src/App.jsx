@@ -6,12 +6,12 @@ import Input from "./components/Input";
 function App() {
   const [password, setpassword] = useState("");
   const [copyText, setcopyText] = useState("Copiar")
+
   const [passwordSize, setPasswordSize] = useState(12)
-  const [nameChange, setNameChange] = useState("")
+  const [showInput, setShowInput] = useState(false)
 
 
 
-  
   function generate() {
     const characters =
       "'1234567890-=!@#$%¨&*()_+qwertyuiop[asdfghjklç~]zxcvbnm,.;/QWERTYUIOP{ASDFGHJKLÇ^}ZXCVBNM<>:?"
@@ -34,34 +34,31 @@ function App() {
       <div className="App">
         <Card>
           <div>
+            <label htmlFor="showInput">Customizar tamanho: </label>
+            <input
+              type="checkbox"
+              id="showInput"
+              value={showInput}
+              onChange={()=> setShowInput(currentState => !currentState)}
+             />
+             
+          </div>
+
+          {showInput ? 
+            <div>
             <label htmlFor="password">Tamanho: </label>
             <Input
-              type={"number"}
-              value={passwordSize}
-              passwordSize={passwordSize}
-              setValue={setPasswordSize}/>
-          </div>
+              setPaswordSize={setPasswordSize}
+              passwordSize={passwordSize}/>
+          </div>: null
+        }
+
           
-          <div>
-            <label htmlFor="name">Seu nome: </label>
-            <Input
-              type="text"
-              value={nameChange}
-              nameChange={nameChange}
-              setValue={setNameChange}
-              placeholder="Digite seu nome"
-              />
-          </div>
-          <button className="button1" onClick={generate}>
-           {`Gerar senha de ${passwordSize} caracteres`} 
+
+          <button className="button1" onClick={generate}> Gerar senha de {showInput ? passwordSize : 8} caracteres
           </button>
           <button className="button2" onClick={copyToClipBoard}>{copyText}</button>
           <p>{password}</p>
-
-
-          <div>
-            <h1>{`Olá ${nameChange}`}</h1>
-          </div>
         </Card>
         
       </div>

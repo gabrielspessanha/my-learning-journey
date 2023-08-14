@@ -1,8 +1,13 @@
 .App{
-
+  
 
   text-align: center;
   background-color: rgb(58, 58, 58);
+}
+
+.App>div{
+  display: flex;
+  flex-direction: column;
 }
 
 button{

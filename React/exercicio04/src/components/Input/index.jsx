@@ -8,11 +8,10 @@ Input.propTypes = {
 export default function Input(props){
   return (
     <input
-      {...props}
-      min={1}
-      onChange={(ev)=>{
-        props.setValue(ev.target.value)
-      }}
+      type='number'
+      id='passwordSize'
+      value={props.passwordSize}
+      onChange={ev => props.setPaswordSize(+ev.target.value)}
        />
   )
 }

@@ -1,0 +1,60 @@
+git status - serve pra ver o estatus do repositorio se falta comit ou os arquivos que foram alterados
+
+git add * - para adicionar todas mudanças no repositorio local * fazer isso antes de dar comit *
+
+git config : retorna as opções de flags
+
+git config —global  [user.name](http://user.name)  “nome do usuario”
+
+git config —global  [user.](http://user.name)email  “email da conta no github”
+
+serve pra definir configurações globais pro git 
+
+git comit -m ‘nome do comit ‘ : comando para fazer comit
+
+git push : para publicar subir todas as alterações pro repositorio
+
+git pull: puxar as alterações do repositorio (caso outra pessoa que está trabalhando no projeto lançar a atualização e vc só poderá fazer o push se o seu código estiver atualizado )
+
+git diff - pra ver a diferença da sua area de trabalho com seu ultimo commit pra ver se possui diferenças
+
+git commit - - amend : serve para modificar o ultimo commit
+
+git reset HEAD ( nome do arquivo ) - tira o arquivo do staged
+
+git checkout - - (nome do arquivo) : arquivo volta pro ultimo commit ( muda os arquivos )
+
+branchs - servem para desenolver features isoladas
+
+É possivel misturar as branchs usando comando merge 
+
+git branch : mostra as branchs
+
+git  branch ( nome da branch ) : para criar uma nova branch
+
+git checkout (nome da branch ) : para mudar de  branch
+
+git branch -d ( nome da branch) : deleta a branch especificada
+
+git checkout -b ( nome da branch) : cria  a nova branch e muda pra ela * atalho *
+
+merge : mistura entre duas branchs, trazendo a mudança de uma branch pra outra
+
+git merge ( nome da branch q quer adicionar ) : serve pra juntar duas branchs
+
+fork é copiar todo o repositorio 
+
+pull request é um pedido de aceitação de mudanças em repositorios oficias ( como por exemplo contribuir em projetos open source ) 
+
+Readme é o documento oficial pra explicar sobre o repositorio
+
+git remote add (url ) - para linkar o projeto local com o projeto do git
+
+git push origin master - comando pra subir o código pro repositorio ( sempre utilizar) 
+
+- - master: se o nome da branch for a master
+- - origin: foi definido no git remote add origin
+
+git pull origin master - significa que iremos baixar, puxar os códigos da master da origin 
+
+.gitignore - é um arquivo que dentro dele recebe o nome de todos os arquivos ou pastas que serão ignorados e não irão aparecer no git status

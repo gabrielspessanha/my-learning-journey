@@ -1,0 +1,1 @@
+etapa de instação do git foi bem simples utlizando o terminal do linux unbuntu

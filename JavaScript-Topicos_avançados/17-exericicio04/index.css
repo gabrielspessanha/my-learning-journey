@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #dfdfdf;
+    border-radius: 20px;
+    padding: 2rem;
+}
+.card{
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem 1rem;
+    border-radius: 20px;
+    background-color: rgb(73, 236, 122);
+}
+
+input[type= "submit"]{
+    padding: .3rem 1rem;
+    background-color: rgb(73, 236, 122);
+    border: none;
+    border-radius: 20px;
+}

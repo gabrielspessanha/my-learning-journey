@@ -1,6 +1,5 @@
 function createCountryCard(country){
 
-    
     const card = document.createElement('div')
     card.classList.add('country')
 

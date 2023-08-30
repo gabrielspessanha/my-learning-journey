@@ -10,7 +10,21 @@ function renderFinance(financeData) {
     const value = document.createElement('p')
     value.textContent = `$${financeData.value}`
 
-    card.append(name, value)
+    const buttonD = document.createElement('button')
+    buttonD.textContent = 'Del'
+    buttonD.type = 'button'
+    buttonD.classList.add('buttonDelete')
+
+    const buttonA = document.createElement('button')
+    buttonA.textContent = 'Edit'
+    buttonA.type = 'button'
+    buttonA.classList.add('buttonEdit')
+
+    const section = document.createElement('section')
+    section.classList.add('section')
+
+    section.append(value, buttonA, buttonD)
+    card.append(name, section)
     document.querySelector('#finance').appendChild(card)
 }
 
@@ -45,3 +59,7 @@ form.addEventListener('submit', async (ev)=>{
     form.reset()
     renderFinance(savedFinance)
 })
+
+function btnDelete(){
+    console.log('testee')
+}

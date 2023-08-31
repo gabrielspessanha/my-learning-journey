@@ -28,6 +28,7 @@ body{
     justify-content: space-between;
     padding: .3rem 1rem;
     border-radius: 20px;
+    min-width: 500px;
     background-color: rgb(73, 236, 122);
 }
 
@@ -39,7 +40,7 @@ input[type= "submit"]{
 }
 .section{
     display: flex;
-    gap: 0.2rem;
+    gap: 0.6rem;
     align-items: center;
 }
 
@@ -65,4 +66,13 @@ input[type= "submit"]{
 }
 .buttonEdit:hover{
     transform: scale(1.2);
+}
+
+.credit{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+.debit{
+    color: rgb(255, 68, 68);
+    font-weight: 900;
 }

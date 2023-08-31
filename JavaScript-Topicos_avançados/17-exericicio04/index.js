@@ -1,5 +1,6 @@
 let finances = [
 ]
+/* ---------- */
 
 function createCard(id){
     const card = document.createElement('div')

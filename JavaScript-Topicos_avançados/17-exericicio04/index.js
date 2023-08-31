@@ -1,5 +1,4 @@
 let finances = [
-
 ]
 
 function createCard(id){

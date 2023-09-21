@@ -1,0 +1,20 @@
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.linksDashboard{
+    display: flex;
+    gap: 2rem;
+
+    &>*{
+        transition: .2s;
+    }
+
+    &>*:hover{
+        color: #FFF;
+    }
+}

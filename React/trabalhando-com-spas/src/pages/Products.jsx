@@ -1,5 +1,5 @@
 
-import products from '../dabase.json'
+import products from '../database.json'
 import { Link } from 'react-router-dom'
 
 

@@ -7,7 +7,7 @@ export function Header(){
         <header>
          <nav style={{display: "flex",gap: "2rem"}}>
             <Link to="/">Inicio</Link>
-            <Link to="/product">Produtos</Link>
+            <Link to="/products">Produtos</Link>
             <Link to="/cart">Carrinho</Link>
                     
          </nav>

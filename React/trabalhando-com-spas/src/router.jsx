@@ -4,6 +4,7 @@ import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import AdminHome from "./pages/admin/AdminHome";
 import RootLayoute from "./pages/RootLayoute";
+import Product from "./pages/Product";
 
 
 
@@ -16,10 +17,13 @@ const router = createBrowserRouter([
             element: <Home />
 
         },{
-            path: "/product",
+            path: "/products",
             element: <Products />
         },
         {
+            path: "product/:productId ",
+            element: <Product />
+        },{
             path: "/cart",
             element: <Cart />
         }

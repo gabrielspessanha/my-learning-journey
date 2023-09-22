@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Content } from "./styles";
+import { ItemsContext } from "../../contexts/ItemsContext";
 
 
 
 export function NewItem(){
+
+    const { createItem } = useContext(ItemsContext)
 
     const [name , setName] = useState("")
     const [amount, setAmount] = useState(0)
@@ -11,17 +14,21 @@ export function NewItem(){
     const [category , setCategory] = useState("")
     const [description, setDescription] = useState("")
 
+    function getRandomId() {
+        return Math.floor(Math.random() * 1000000);
+      }
+
     function createNewItem(event){
         event.preventDefault()
         
-        const newItem ={
+        createItem ({
+            id: getRandomId(),
             name,
             amount,
             price,
             category,
             description
-        }
-        console.log(newItem)
+        })
 
         setName("")
         setAmount(0)

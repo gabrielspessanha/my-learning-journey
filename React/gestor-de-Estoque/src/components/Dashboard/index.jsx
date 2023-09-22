@@ -1,9 +1,15 @@
+import { useContext } from "react";
 import { Main } from "./styles";
+import { ItemsContext } from "../../contexts/ItemsContext";
 
 
 
 
 export function Dashboard(){
+
+    const { items } = useContext(ItemsContext)
+
+
     return(
         <Main>
             <h2>Deshboard</h2>
@@ -15,7 +21,7 @@ export function Dashboard(){
 
                 <div>
                     <p>Inventario total</p>
-                    <h2>00</h2>
+                    <h2>{items.length}</h2>
                 </div>
 
                 <div>

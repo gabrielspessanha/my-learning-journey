@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom"
 import { Table } from "./styles"
+import { ItemsContext } from "../../contexts/ItemsContext"
+import { useContext } from "react"
 
 
 export function AllItems(){
+
+    const { items } = useContext(ItemsContext)
     return(
         <Table>
             <thead>
@@ -15,30 +19,21 @@ export function AllItems(){
             </tr>
             </thead>
             <tbody>
-               <tr>
-                  <td>ld2896731b31kj3</td>
-                  <td>7 Wonders</td>
-                  <td>8 unid</td>
-                  <td>Jogos</td>
+              {items.map((item)=>(
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.name}</td>
+                  <td>{item.amount} unid</td>
+                  <td>{item.category}</td>
                   <td>
                     <Link to={"items/:itemid"} ><button className="show">ver</button></Link>
                     <button className="update">Atualizar</button>
                     <button className="delete">Excluir</button>
-                 </td>
-                  
-               </tr>
-               <tr>
-                 <td>ld289527890196j3</td>  
-                 <td>O senhor do aneis</td>
-                 <td>32 unid.</td>
-                 <td>Livros</td>
-                 <td>
-                   <Link to={"items/:itemid"} ><button className="show">ver</button></Link>
-                   <button className="update">Atualizar</button>
-                   <button className="delete">Excluir</button>
-                 </td>
-               </tr>
-                  
+                  </td> 
+
+                </tr> 
+              ))}
+                
             </tbody>
        </Table>
     )

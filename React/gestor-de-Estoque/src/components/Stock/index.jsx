@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AllItems } from "../AllItems";
 import { Item } from "../Item";
 import { NewItem } from "../NewItem";
@@ -12,12 +13,10 @@ export function Stock(){
 
             <section>
                 <header>
-                    <p>todos os items</p>
-                    <p>Novo item</p>
+                    <Link to={"/items"}>todos os items</Link>
+                    <Link to={"items/newitem"}>Novo item</Link>
                 </header>
             </section>
-
-            <Item />
         </Container>
     )
 }

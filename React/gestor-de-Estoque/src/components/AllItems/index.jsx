@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Table } from "./styles"
 
 
@@ -20,7 +21,7 @@ export function AllItems(){
                   <td>8 unid</td>
                   <td>Jogos</td>
                   <td>
-                    <button className="show">ver</button>
+                    <Link to={"items/:itemid"} ><button className="show">ver</button></Link>
                     <button className="update">Atualizar</button>
                     <button className="delete">Excluir</button>
                  </td>
@@ -32,7 +33,7 @@ export function AllItems(){
                  <td>32 unid.</td>
                  <td>Livros</td>
                  <td>
-                   <button className="show">ver</button>
+                   <Link to={"items/:itemid"} ><button className="show">ver</button></Link>
                    <button className="update">Atualizar</button>
                    <button className="delete">Excluir</button>
                  </td>

@@ -2,14 +2,13 @@ import { styled } from "styled-components";
 
 
 export const Table = styled.table`
-        margin: 2rem 0;
-        width: 100%;
+        margin: 2rem;
+        width: 95%;
         text-align: left;
         border-spacing: 0 .5rem;
 
 
         thead{
-
             tr{
                 border-radius: 5px;
                 height: 50px;
@@ -22,8 +21,11 @@ export const Table = styled.table`
         }
         
         tbody{
+
             tr{
                 transition: background .2s;
+                
+                
 
                 &:hover{
                     background: #222831;

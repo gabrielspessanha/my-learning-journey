@@ -1,15 +1,9 @@
 
-import { Dashboard } from './components/Dashboard'
-import { Header } from './components/Header'
-import { Stock } from './components/Stock'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router'
 
 function App() {
-  return (
-    <>
-     <Header />
-     <Stock />
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

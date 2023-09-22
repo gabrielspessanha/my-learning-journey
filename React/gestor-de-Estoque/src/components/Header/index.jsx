@@ -7,8 +7,8 @@ export function Header(){
         <nav className="navbar">
             <h2>REACT STOCK</h2>
             <div className="linksDashboard">
-                <p>inicio</p>
-                <p>items</p>
+                <Link to={"/"}>Home</Link>
+                <Link to={"/items"}>Items</Link>
             </div>
         </nav>
     )

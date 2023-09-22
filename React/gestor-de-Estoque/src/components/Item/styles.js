@@ -3,15 +3,11 @@ import { styled } from "styled-components";
 
 
 export const Content = styled.div`
-    margin-top: 2rem;
+    margin: 2rem;
 
     .buttons{
         display: flex;
         gap: 2rem;
-
-        button{
-            
-        }
     }
 
     .cards{

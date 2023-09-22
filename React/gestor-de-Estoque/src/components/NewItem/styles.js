@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
 
 export const Content = styled.form`
-    margin: 2rem 0;
+    margin: 2rem 2rem;
     
 
     section{

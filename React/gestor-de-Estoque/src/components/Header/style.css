@@ -12,6 +12,7 @@
 
     &>*{
         transition: .2s;
+        align-self: center;
     }
 
     &>*:hover{

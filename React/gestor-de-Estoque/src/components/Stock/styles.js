@@ -18,6 +18,7 @@ export const Container = styled.div`
                 margin: -1px;
                 border-bottom: 1px solid transparent;
                 transition: border .2s;
+                color: #FFF;
 
                 &:hover{
                     border-bottom: 1px solid #FFF;

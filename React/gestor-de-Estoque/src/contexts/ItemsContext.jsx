@@ -15,12 +15,36 @@ export function ItemsProvider({children}){
         } else{
             setItems([...items, itemInput ])
         }
-        console.log(items)
+    }
+
+    function updateItem(itemInput){
+        const indexItem = items.findIndex((item)=> item.id === itemInput.id)
+        
+        const item = items[indexItem]
+        const itemUpdate ={
+            ...item,
+            name: itemInput.name === ""? item.name: itemInput.name,
+            amount: itemInput.amount === 0 ? item.amount: itemInput.amount,
+            price: itemInput.price === 0 ? item.price: itemInput.price,
+            category: itemInput.category === ""? "Livro": itemInput.category,
+            description: itemInput.description === ""? item.description: itemInput.description,
+        }
+        const itemsUpdated = [...items]
+        itemsUpdated[indexItem] = itemUpdate
+
+        setItems(itemsUpdated);
+    }
+
+    function deleteItem(itemInput){
+        const indexItem = items.findIndex( (item) => item.id === itemInput.id)
+
+        const item = items[indexItem]
+        console.log("Item que será excluido: "+ item)
     }
 
 
     return(
-        <ItemsContext.Provider value={{items, setItems, createItem}}>
+        <ItemsContext.Provider value={{items, setItems, createItem, updateItem}}>
             {children}
         </ItemsContext.Provider>
     )

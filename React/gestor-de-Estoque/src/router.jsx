@@ -6,6 +6,7 @@ import { StockPage } from "./pages/StockPage";
 import { ItemPage } from "./pages/ItemPage";
 import { AllItemsPage } from "./pages/AllItemsPage";
 import { NewItemPage } from "./pages/NewItemPage";
+import { UpdateItem } from "./components/UpdateItem";
 
 
 
@@ -28,8 +29,12 @@ export const router = createBrowserRouter([
                     element: <AllItemsPage />
                 },
                 {
-                    path: "items/:itemId",
-                    element: <ItemPage />
+                    path: ":itemId",
+                    element: <ItemPage />,
+                },
+                {
+                    path: ":itemId/update",
+                    element: <UpdateItem />
                 },
                 {
                     path: "items/newitem",

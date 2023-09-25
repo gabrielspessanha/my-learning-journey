@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Main } from "./styles";
 import { ItemsContext } from "../../contexts/ItemsContext";
+import { Link } from "react-router-dom";
 
 
 
@@ -16,7 +17,7 @@ export function Dashboard(){
             <section className="mainDashboard">
                 <div >
                     <p>Diversidade de items</p>
-                    <h2>0</h2>
+                    <h2></h2>
                 </div>
 
                 <div>
@@ -45,14 +46,16 @@ export function Dashboard(){
                         </thead>
 
                      <tbody>
-                        <tr>
-                            <td>7 wonders</td>
-                            <td><button>Ver</button></td>
-                        </tr>
-                        <tr>
-                            <td>O senhor do aneis</td>
-                            <td><button>Ver</button></td>
-                        </tr>
+                        {items.map((item)=>(
+                            <tr key={item.id}>
+                                <td>{item.name}</td>
+                                <td>
+                                    <Link to={`items/${item.id}`} ><button className="show">ver</button></Link>
+                                </td>
+                                
+                            </tr>
+                        ))}
+                        
                      </tbody>
                   </table>
 
@@ -67,16 +70,16 @@ export function Dashboard(){
                         
 
                      <tbody>
-                        <tr>
-                            <td>7 wonders</td>
-                            <td>8</td>
-                            <td><button>Ver</button></td>
-                        </tr>
-                        <tr>
-                            <td>O senhor dos aneis</td>
-                            <td>17</td>
-                            <td><button>Ver</button></td>
-                        </tr>
+                        {items.map((item)=>(
+                            <tr key={item.id}>
+                                <td>{item.name}</td>
+                                <td>{item.amount}</td>
+                                <td>
+                                    <Link to={`items/${item.id}`} ><button className="show">ver</button></Link>
+                                </td>
+                                
+                            </tr>
+                        ))}
                         
                      </tbody>
 

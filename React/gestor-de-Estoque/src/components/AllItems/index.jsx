@@ -26,8 +26,8 @@ export function AllItems(){
                   <td>{item.amount} unid</td>
                   <td>{item.category}</td>
                   <td>
-                    <Link to={"items/:itemid"} ><button className="show">ver</button></Link>
-                    <button className="update">Atualizar</button>
+                    <Link to={`${item.id}`} ><button className="show">ver</button></Link>
+                    <Link to={`/items/${item.id}/update`}><button className="update">Atualizar</button></Link> 
                     <button className="delete">Excluir</button>
                   </td> 
 

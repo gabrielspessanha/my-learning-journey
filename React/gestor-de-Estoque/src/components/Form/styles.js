@@ -3,7 +3,9 @@ import { styled } from "styled-components";
 
 
 export const Content = styled.form`
-    margin: 2rem 2rem;
+    margin: 2rem auto;
+    max-width: 1080px;
+    
     
 
     section{

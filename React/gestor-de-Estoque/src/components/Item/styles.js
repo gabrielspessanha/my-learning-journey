@@ -8,6 +8,12 @@ export const Content = styled.div`
     .buttons{
         display: flex;
         gap: 2rem;
+
+        button{
+            width: 7rem;
+            height: 3rem;
+            align-self: center;
+        }
     }
 
     .cards{

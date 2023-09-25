@@ -8,7 +8,7 @@ import { ItemsContext } from "../../contexts/ItemsContext";
 export function Item(){
     const {itemId} = useParams()
 
-    const { items } = useContext(ItemsContext)
+    const { items,formaterDateToBrasil  } = useContext(ItemsContext)
 
     const item = items.find(p => p.id === +itemId)
 
@@ -35,7 +35,7 @@ export function Item(){
                 </p>
             </div>
             <p>Descrição: {item.description}</p>
-            <p>Data: {item.date}
+            <p>Data: {formaterDateToBrasil(item.date)}
             </p>
         </Content>
     )

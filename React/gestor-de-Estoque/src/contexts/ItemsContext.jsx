@@ -29,6 +29,7 @@ export function ItemsProvider({children}){
             category: itemInput.category === ""? "Livro": itemInput.category,
             description: itemInput.description === ""? item.description: itemInput.description,
         }
+        const result = alert("olá")
         const itemsUpdated = [...items]
         itemsUpdated[indexItem] = itemUpdate
 
@@ -39,12 +40,24 @@ export function ItemsProvider({children}){
         const indexItem = items.findIndex( (item) => item.id === itemInput.id)
 
         const item = items[indexItem]
-        console.log("Item que será excluido: "+ item)
+        const updatedItems = [...items]
+        updatedItems.splice(indexItem, 1)
+        setItems(updatedItems)
+        console.log(`item ${item.name} foi removido`)
+        
     }
+
+    function formaterDateToBrasil(data) {
+        const dia = String(data.getDate()).padStart(2, '0');
+        const mes = String(data.getMonth() + 1).padStart(2, '0');
+        const ano = data.getFullYear();
+      
+        return `${dia}/${mes}/${ano}`;
+      }
 
 
     return(
-        <ItemsContext.Provider value={{items, setItems, createItem, updateItem}}>
+        <ItemsContext.Provider value={{items, setItems, createItem, updateItem, deleteItem, formaterDateToBrasil}}>
             {children}
         </ItemsContext.Provider>
     )

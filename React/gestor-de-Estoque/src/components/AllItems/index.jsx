@@ -6,7 +6,13 @@ import { useContext } from "react"
 
 export function AllItems(){
 
-    const { items } = useContext(ItemsContext)
+    const { items, deleteItem } = useContext(ItemsContext)
+
+    function deleteItemById(item){
+      console.log(item)
+      deleteItem(item)
+    }
+
     return(
         <Table>
             <thead>
@@ -28,7 +34,8 @@ export function AllItems(){
                   <td>
                     <Link to={`${item.id}`} ><button className="show">ver</button></Link>
                     <Link to={`/items/${item.id}/update`}><button className="update">Atualizar</button></Link> 
-                    <button className="delete">Excluir</button>
+                    <button onClick={() => deleteItemById(item)} className="delete">Excluir</button>
+
                   </td> 
 
                 </tr> 

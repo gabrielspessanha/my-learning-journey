@@ -25,6 +25,7 @@ export const Main = styled.main`
    .tableDashboard{
     margin-top: 2rem;
     display: flex;
+    align-items: start;
     justify-content: space-between;
     gap: 1rem;
 
@@ -35,10 +36,11 @@ export const Main = styled.main`
 
 
         thead{
-
+            
             tr{
                 border-radius: 5px;
                 height: 50px;
+                border: 2px solid red;
                 background-color: #1a1a1a;
             }
         }

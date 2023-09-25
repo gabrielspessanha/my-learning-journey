@@ -10,7 +10,7 @@ export function Form(props){
     const [name , setName] = useState("")
     const [amount, setAmount] = useState(0)
     const [price, setPrice] = useState(0)
-    const [category , setCategory] = useState("")
+    const [category , setCategory] = useState("Livro")
     const [description, setDescription] = useState("")
 
     const {itemId} = useParams()
@@ -27,6 +27,7 @@ export function Form(props){
         event.preventDefault()
         
         const eventClick = props.eventClick
+        console.log(category)
 
         if (eventClick === "create"){
             createItem ({
@@ -36,7 +37,7 @@ export function Form(props){
                 price,
                 category,
                 description,
-                date: new Intl.DateTimeFormat('pt-BR', {timeZone: 'UTC'}).format()
+                date: new Date()
             })
         }else{
             updateItem({

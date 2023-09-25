@@ -10,6 +10,18 @@ export function Dashboard(){
 
     const { items } = useContext(ItemsContext)
 
+    const runningOutOfStock = items.filter( (item)=>{
+        return item.amount <= 10
+    })
+
+    const diversifieldItem = Array.from(new Set(items.map(item => item.category)));
+
+    const dateLimit = new Date();
+    dateLimit.setDate(dateLimit.getDate()- 7);
+
+    const recentsItems = items.filter( (item)=>{
+        return item.date >= dateLimit;
+    })
 
     return(
         <Main>
@@ -17,7 +29,7 @@ export function Dashboard(){
             <section className="mainDashboard">
                 <div >
                     <p>Diversidade de items</p>
-                    <h2></h2>
+                    <h2>{diversifieldItem.length}</h2>
                 </div>
 
                 <div>
@@ -27,12 +39,12 @@ export function Dashboard(){
 
                 <div>
                     <p>Itens recentes</p>
-                    <h2>00</h2>
+                    <h2>{recentsItems.length}</h2>
                 </div>
 
                 <div>
                     <p>Itens acabando</p>
-                    <h2>00</h2>
+                    <h2>{runningOutOfStock.length}</h2>
                 </div>
             </section>
 
@@ -46,7 +58,9 @@ export function Dashboard(){
                         </thead>
 
                      <tbody>
-                        {items.map((item)=>(
+                        {recentsItems.length === 0 ?
+                        <tr><td><p>sem items recentes</p></td></tr>
+                        :recentsItems.map((item)=>(
                             <tr key={item.id}>
                                 <td>{item.name}</td>
                                 <td>
@@ -70,7 +84,9 @@ export function Dashboard(){
                         
 
                      <tbody>
-                        {items.map((item)=>(
+                        {runningOutOfStock.length === 0 ?
+                        <tr><td><p>Não possui items acabando</p></td></tr>
+                        :runningOutOfStock.map((item)=>(
                             <tr key={item.id}>
                                 <td>{item.name}</td>
                                 <td>{item.amount}</td>

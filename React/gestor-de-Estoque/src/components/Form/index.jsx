@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Content } from "./styles";
 import { ItemsContext } from "../../contexts/ItemsContext";
 import { useParams } from "react-router-dom";
@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 export function Form(props){
 
     const { createItem, updateItem} = useContext(ItemsContext)
+    const inputRef = useRef(null)
 
     const [name , setName] = useState("")
     const [amount, setAmount] = useState(0)
@@ -27,7 +28,6 @@ export function Form(props){
         event.preventDefault()
         
         const eventClick = props.eventClick
-        console.log(category)
 
         if (eventClick === "create"){
             createItem ({
@@ -50,6 +50,7 @@ export function Form(props){
             })
         }
 
+        inputRef.current.focus()
         setName("")
         setAmount(0)
         setPrice(0)
@@ -67,7 +68,8 @@ export function Form(props){
                     <input 
                         type="text" 
                         id="name"
-                        required 
+                        required
+                        ref={inputRef}
                         value={name}
                         onChange={(e)=> setName(e.target.value)}
                         

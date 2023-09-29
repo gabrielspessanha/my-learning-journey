@@ -9,7 +9,6 @@ export function AllItems(){
     const { items, deleteItem } = useContext(ItemsContext)
 
     function deleteItemById(item){
-      console.log(item)
       deleteItem(item)
     }
 

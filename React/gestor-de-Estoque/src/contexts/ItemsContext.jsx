@@ -5,7 +5,13 @@ export const ItemsContext = createContext({})
 
 
 export function ItemsProvider({children}){
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState(()=>{
+        const storedItems = localStorage.getItem("items")
+        if(!storedItems) return []
+        const items = JSON.parse(storedItems)
+
+        return items
+    })
 
     function createItem(itemInput){
         const existingItemId = items.findIndex((item) => item.name === itemInput.name)
@@ -13,7 +19,10 @@ export function ItemsProvider({children}){
         if (existingItemId !== -1){
             alert("Já existe um item com esse nome!")
         } else{
-            setItems([...items, itemInput ])
+            const updatedItems = [...items, itemInput ]
+            setItems(updatedItems)
+            localStorage.setItem("items", JSON.stringify(updatedItems) )
+            alert("Item adicionado")
         }
     }
 
@@ -29,21 +38,24 @@ export function ItemsProvider({children}){
             category: itemInput.category === ""? "Livro": itemInput.category,
             description: itemInput.description === ""? item.description: itemInput.description,
         }
-        const result = alert("olá")
         const itemsUpdated = [...items]
         itemsUpdated[indexItem] = itemUpdate
 
         setItems(itemsUpdated);
+        alert("Item atualizado!")
     }
 
     function deleteItem(itemInput){
         const indexItem = items.findIndex( (item) => item.id === itemInput.id)
-
         const item = items[indexItem]
-        const updatedItems = [...items]
-        updatedItems.splice(indexItem, 1)
-        setItems(updatedItems)
-        console.log(`item ${item.name} foi removido`)
+
+        if(confirm(`tem certeza que deseja excluir o item ${item.name} ?`)){
+            const updatedItems = [...items]
+            updatedItems.splice(indexItem, 1)
+            setItems(updatedItems)
+            alert(`item ${item.name} foi removido`)
+        }
+        
         
     }
 
@@ -57,7 +69,7 @@ export function ItemsProvider({children}){
 
 
     return(
-        <ItemsContext.Provider value={{items, setItems, createItem, updateItem, deleteItem, formaterDateToBrasil}}>
+        <ItemsContext.Provider value={{items, createItem, updateItem, deleteItem, formaterDateToBrasil}}>
             {children}
         </ItemsContext.Provider>
     )

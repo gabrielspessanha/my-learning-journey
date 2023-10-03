@@ -10,9 +10,9 @@ const Cart: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>
-        Carrinho
-      </h1>
+      <main>
+        <h1>Carrinho</h1>
+      </main>
     </>
   )
 }

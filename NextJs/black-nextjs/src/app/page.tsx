@@ -1,18 +1,14 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import Head from 'next/head'
 import { NextPage } from 'next'
+import  SubscribeForm from "@/components/SubscribeForm"
 
 const Home: NextPage = () => {
   return (
     <>
-    <Head>
-      <title>Página principal</title>
-
-    </Head>
-    <main className={styles.main}>
-      <h1>Hello world</h1>
+    <main>
+      <h1>Home</h1>
+      <SubscribeForm />
     </main>
+
     </>
     
   )

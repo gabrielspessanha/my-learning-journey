@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import './globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Poppins } from 'next/font/google'
 
@@ -29,9 +28,7 @@ export default function RootLayout({
           </header>
         </div>
         {children}
-        <footer className="p-10">
-            <p>Feito com Next.js 13.4</p>
-          </footer>
+       
       </body>
     </html>
   )

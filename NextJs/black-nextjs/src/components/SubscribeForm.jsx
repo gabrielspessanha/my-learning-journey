@@ -13,7 +13,7 @@ export default function SubscribeForm() {
 
   return (
     <form
-      className="flex justify-center gap-4 p-4"
+      className="flex justify-center"
       onSubmit={handleSubmit}
     >
       <input
@@ -21,11 +21,11 @@ export default function SubscribeForm() {
         name="email"
         id="email"
         placeholder="Seu e-mail principal"
-        className="bg-slate-800 p-3 rounded"
+        className="bg-slate-800 rounded"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button className="bg-sky-700 p-3 rounded">
+      <button className=" rounded">
         Se inscrever
       </button>
     </form>

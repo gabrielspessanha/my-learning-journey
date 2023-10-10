@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: var(--font-poppins);
+}
+body{
+  padding: 0 2rem;
+}
+
+.header{
+  display: flex;
+  padding: .5rem 0;
+  width: 100%;
+  justify-content: space-between;
+}
+.links{
+  display: flex;
+  gap: 1rem;
+}
+
+a{
+  text-decoration: none;
+  transition: transform .2s;
+}
+
+a:hover{
+  transform: scale(1.1);
+}

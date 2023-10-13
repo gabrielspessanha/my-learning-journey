@@ -1,4 +1,4 @@
-function sendSpaceShip(name: string, captain: string){
+/*function sendSpaceShip(name: string, captain: string){
   const spaceship ={
     name,
     captain,
@@ -32,3 +32,5 @@ const currentShip = sendSpaceShip(spaceshipName, spaceshipCaption)
 const speed = Number(prompt('Insira a velocidade para a qual deseja acelerar '))
 
 accelarete(speed, currentShip)
+
+*/

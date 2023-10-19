@@ -77,35 +77,18 @@ async function resolvePromisse(user: User){
   return repoFiltered
 }
 
-async function getReposLength(user: User){
-  let count = 0
 
-  const response = await fetch(user.repos_url)
+function showReposTotal() {
+  const reposTotal = users.reduce((acc, user)=> acc + user.public_repos,0)
 
-  const data = await response.json()
-
-  count += data.length
-
-  return count
-}
-
-async function countReposAllUsers() {
-  const promises = users.map(user => getReposLength(user));
-
-  try {
-    const results = await Promise.all(promises);
-    const count = results.reduce((acc, numRepos) => acc + numRepos, 0);
-    alert(`A soma do repositórios de todos os usuários é: ${count}`);
-  } catch (error) {
-    console.error(error);
-  }
+  alert(`O grupo possui totla de ${reposTotal} repositorios públicos`)
 }
 
 async function showTopFiveUsers(){
   const usersCopy = users.slice(0);
 
   const topFive = usersCopy.sort( (a,b)=>{
-    return  +getReposLength(a) -   +getReposLength(b)
+    return  b.public_repos -  a.public_repos
   })
   topFive.splice(5)
   topFive.forEach( user => {
@@ -142,7 +125,7 @@ function Menu(){
         showInfoUser(name)
         break
       case 4:
-        countReposAllUsers()
+        showReposTotal()
         break
       case 5:
         showTopFiveUsers()

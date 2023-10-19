@@ -1,6 +1,12 @@
 type Situation = "habitado" | "habitavel" | "inabitavel" | "inexplorado"
 
-type planetType = {name: string, coordinates: number[], situation: Situation, satellites: string[]| void}
+type planetType = {
+  name: string, 
+  coordinates: number[], 
+  situation: Situation, 
+  satellites: string[]| void
+}
+
 const planets = []
 
 function SaveNewPlanet(){

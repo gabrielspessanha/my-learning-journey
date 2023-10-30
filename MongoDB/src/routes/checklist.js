@@ -7,10 +7,10 @@ const Checklist = require('../models/checklist');
 
 router.get('/', async (req, res) =>{
     try{
-      let checklist = await Checklist.find({})
-      res.status(200).json(checklist)
+      let checklists = await Checklist.find({})
+      res.status(200).render('checklists/index', {checklists: checklists})
     }catch (error) {
-      res.status(500).json(error)
+      res.status(500).render('pages/error', {error: 'Erro ao exibir as  listas de tarefas'})
     }
 })
 
@@ -29,18 +29,18 @@ router.post('/', async (req, res)=>{
 router.get('/:id', async (req, res)=>{
   console.log('Fazendo requisição...')
   try{
-    let checklist = await Checklist.findById(req.params.id)
-    res.status(200).json(checklist)
+    let checklists = await Checklist.findById(req.params.id)
+    res.status(200).render('checklists/index', {checklist: checklists})
   }catch (error){
-    res.status(500).json(error)
+    res.status(500).render('pages/error', {error: 'Erro ao exibir as  listas de tarefas'})
   }
 })
 
 router.put('/:id', async (req,res)=>{
   let { name } = req.body
   try{
-    let checklist = await Checklist.findByIdAndUpdate(req.params.id, {name}, {new: true})
-    res.status(200).json(checklist)
+    let checklists = await Checklist.findByIdAndUpdate(req.params.id, {name}, {new: true})
+    res.status(200).json(checklists)
   }catch (error){
     res.status(500).json(error)
   }

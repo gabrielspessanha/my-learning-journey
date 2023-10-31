@@ -1,11 +1,9 @@
-{async ()=>{
-  const Planet = require("./models/Planet")
+const express = require("express")
+const routes = require("./src/routes");
 
-  const newPlanet = await Planet.create({
-    name: "Terra",
-    position: 3,
-  })
+const app = express();
 
+app.use(express.json())
+app.use(routes)
 
-}};
-console.log("teste")
+app.listen(3000);

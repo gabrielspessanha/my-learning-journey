@@ -9,6 +9,7 @@ function menu(){
 
     userInteraction(question)
 }
+
 function askQuestion(question){
   const rl = readLine.createInterface({
     input: process.stdin,

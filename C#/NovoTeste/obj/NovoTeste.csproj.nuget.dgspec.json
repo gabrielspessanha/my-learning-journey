@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\MeuApp\\MeuApp.csproj": {}
+    "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\NovoTeste\\NovoTeste.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\MeuApp\\MeuApp.csproj": {
+    "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\NovoTeste\\NovoTeste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\MeuApp\\MeuApp.csproj",
-        "projectName": "MeuApp",
-        "projectPath": "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\MeuApp\\MeuApp.csproj",
+        "projectUniqueName": "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\NovoTeste\\NovoTeste.csproj",
+        "projectName": "NovoTeste",
+        "projectPath": "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\NovoTeste\\NovoTeste.csproj",
         "packagesPath": "C:\\Users\\gabriel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\MeuApp\\obj\\",
+        "outputPath": "C:\\Users\\gabriel\\Documents\\MeuProjetos\\my-learning-journey\\C#\\NovoTeste\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config"

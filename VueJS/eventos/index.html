@@ -1,0 +1,31 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app" v-on:mousemove="updateXY">
+  <p>{{ contador }}</p>
+  <button v-on:click="increment(5)">increment 1</button>
+  <p>Mouse: {{x}} {{y}}</p>
+  <input type="text" v-on:keyup.enter="showAlert">
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      contador: 0,
+      x: 0,
+      y: 0
+    },
+    methods: {
+      increment(value) {
+        this.contador += value
+      },
+      updateXY(event) {
+        this.x = event.clientX
+        this.y = event.clientY
+      },
+      showAlert() {
+        alert("Digitou")
+      }
+    }
+  })
+</script>

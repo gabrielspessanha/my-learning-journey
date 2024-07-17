@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app">
+    <p>{{ counter }}</p>
+    <p>{{ counter > 10? 'maior que 10': 'Menor que 10' }}</p>
+    <button v-on:click="increment">Somar 1</button>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0
+        },
+        methods: {
+            increment() {
+                this.counter++
+            }
+        }
+    })
+</script>

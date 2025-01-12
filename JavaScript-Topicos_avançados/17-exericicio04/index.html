@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanças pessoais</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1>Finanças pessoais:</h1>
+    <div id="content">
+        <form action="http://localhost:3000/finance" method="post">
+            <input type="hidden" id="id" name="id">
+            <label for="name">Nome: </label>
+            <input type="text" id="name" name="name">
+
+            <label for="value">Valor: </label>
+            <input type="number" id="value" name="value">
+
+            <input type="submit" value="Enviar">
+        </form>
+
+    </div>
+   
+
+    <div>
+        <h2>Saldo: <span id="balance"></span></h2>
+        <h2>Historico de transações: </h2>
+        <div id="finance">
+
+        </div>
+    </div>
+
+    <script src="./index.js" defer></script>
+</body>
+</html>

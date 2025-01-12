@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usando Scroll Spy</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+  <!-- CSS -->
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+
+    .scrollSpy{
+      height: 385px;
+      overflow: auto;
+      position: relative;
+      font-size: 15px;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="row pt-5">
+    <div class="col-3">
+        <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#item-1">Item 1</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+                    <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                </nav>
+                <a class="nav-link" href="#item-2">Item 2</a>
+                <a class="nav-link" href="#item-3">Item 3</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                    <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                </nav>
+            </nav>
+        </nav>
+    </div>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0" class="col scrollSpy">
+        <h4 id="item-1">Item 1</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptatum ad quidem tempore fugiat aspernatur aperiam voluptates expedita qui, totam dignissimos ut quas fugit magnam quibusdam esse enim perspiciatis officiis suscipit libero dolorum? Illo corrupti quos consectetur adipisci, numquam voluptatibus illum veritatis, nisi odit dolorum ducimus voluptate aperiam magni beatae!</p>
+        <h5 id="item-1-1">Item 1-1</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni optio aliquam labore illo eum odio soluta fuga neque deleniti facilis minus incidunt inventore officiis nihil dolorum esse, molestiae facere dolor. Labore quaerat natus nostrum. Error praesentium sint, nulla quod aliquid asperiores ducimus inventore, laborum provident quibusdam dolores libero corporis obcaecati?</p>
+        <h5 id="item-1-2">Item 1-2</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni optio aliquam labore illo eum odio soluta fuga neque deleniti facilis minus incidunt inventore officiis nihil dolorum esse, molestiae facere dolor. Labore quaerat natus nostrum. Error praesentium sint, nulla quod aliquid asperiores ducimus inventore, laborum provident quibusdam dolores libero corporis obcaecati?</p>
+        <h4 id="item-2">Item 2</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni optio aliquam labore illo eum odio soluta fuga neque deleniti facilis minus incidunt inventore officiis nihil dolorum esse, molestiae facere dolor. Labore quaerat natus nostrum. Error praesentium sint, nulla quod aliquid asperiores ducimus inventore, laborum provident quibusdam dolores libero corporis obcaecati?</p>
+        <h4 id="item-3">Item 3</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni optio aliquam labore illo eum odio soluta fuga neque deleniti facilis minus incidunt inventore officiis nihil dolorum esse, molestiae facere dolor. Labore quaerat natus nostrum. Error praesentium sint, nulla quod aliquid asperiores ducimus inventore, laborum provident quibusdam dolores libero corporis obcaecati?</p>
+        <h5 id="item-3-1">Item 3-1</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni optio aliquam labore illo eum odio soluta fuga neque deleniti facilis minus incidunt inventore officiis nihil dolorum esse, molestiae facere dolor. Labore quaerat natus nostrum. Error praesentium sint, nulla quod aliquid asperiores ducimus inventore, laborum provident quibusdam dolores libero corporis obcaecati?</p>
+        <h5 id="item-3-2">Item 3-2</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni optio aliquam labore illo eum odio soluta fuga neque deleniti facilis minus incidunt inventore officiis nihil dolorum esse, molestiae facere dolor. Labore quaerat natus nostrum. Error praesentium sint, nulla quod aliquid asperiores ducimus inventore, laborum provident quibusdam dolores libero corporis obcaecati?</p>
+    </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <script>
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbar-example'
+})
+  </script>
+</body>
+</html>

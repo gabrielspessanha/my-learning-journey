@@ -1,0 +1,14 @@
+{
+  "finance": [
+    {
+      "name": "Rocket League",
+      "amount": -30,
+      "id": 1
+    },
+    {
+      "name": "Salario",
+      "amount": 1300,
+      "id": 3
+    }
+  ]
+}

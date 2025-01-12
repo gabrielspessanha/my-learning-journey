@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #dfdfdf;
+    border-radius: 20px;
+    padding: 2rem;
+}
+.card{
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem 1rem;
+    border-radius: 20px;
+    min-width: 500px;
+    background-color: rgb(73, 236, 122);
+}
+
+input[type= "submit"]{
+    padding: .3rem 1rem;
+    background-color: rgb(73, 236, 122);
+    border: none;
+    border-radius: 20px;
+}
+.section{
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.buttonDelete{
+    padding: .2rem .4rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: 500;
+    background: rgb(255, 61, 61);
+    transition: .2s;
+}
+.buttonDelete:hover{
+    transform: scale(1.2);
+}
+
+.buttonEdit{
+    padding: .2rem .4rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: 500;
+    background: rgb(255, 237, 75);
+    transition: .2s;
+}
+.buttonEdit:hover{
+    transform: scale(1.2);
+}
+
+.credit{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+.debit{
+    color: rgb(255, 68, 68);
+    font-weight: 900;
+}

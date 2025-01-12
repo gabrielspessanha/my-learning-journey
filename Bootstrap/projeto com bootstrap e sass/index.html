@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criando uma Landing Page com Bootstrap</title>
+  <!--Colocando bootStrap no css-->
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="py-5">
+
+  <div class="container py-3 container1">
+      <div class="text-center">
+        <img src="./images/logoOneBitDark.png" class="img-fluid topLogo mt-4 pb-3" alt="logoOneBitCode">
+      </div>
+      
+
+        <form class="ps-3">
+          <!-- ----------------OPÇÂO 1---------------- -->
+          <p  class="paragraph" ">1- Qual é o seu nome? </p>
+
+          <div class="input-group mb-3 " >
+            <span class="input-group-text">Primeiro nome:</span>
+            <input type="text" class="form-control" id="formName" placeholder="Digite aqui: " aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group " >
+            <span class="input-group-text">Segundo nome:</span>
+            <input type="text" class="form-control" id="formName" placeholder="Digite aqui: " >
+          </div>
+
+          <!-- ----------------OPÇÂO 2---------------- -->
+          <p class="paragraph">2- Qual é o seu gênero?</p>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="checkGender" id="checkGenderMan">
+            <label for="checkGenderMan" class="form-check-label">Homem</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="checkGender" id="checkGenderWoman">
+            <label for="checkGenderWoman" class="form-check-label">Mulher</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="checkGender" id="checkGenderOther">
+            <label for="checkGenderOther" class="form-check-label">Prefiro não responder</label>
+          </div>
+
+          <!-- ----------------OPÇÂO 3---------------- -->
+          <p class="paragraph">3-Marque os treinamentos que você fez: </p>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDefault">
+            <label>Treinamento básico de astronauta</label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDefault">
+            <label>Treinamento físico básico</label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDefault">
+            <label>Treinamento avançado de astronauta</label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchDefault">
+            <label>Treinamento físico intenso</label>
+          </div>
+
+          <!-- ----------------OPÇÂO 4---------------- -->
+          <p class="paragraph">4 - Quais você acha que são suas qualidades?</p>
+          
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox"><label>Proativo</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox"><label>Resistente</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox"><label>Não vomito fácil</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox"><label>Não temo marciano</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox"><label>Já vi todos os star wars</label>
+            </div>
+
+         <div class="text-center ">
+          <button class="btn btn-outline-danger btnSend my-2" type="button">Enviar</button>
+         </div>
+        </form>
+  </div>
+  <footer class="fotter text-center">
+    <p>Feito por Gabriel Pessanha ©OneBitCode todos os direitos reservados - 2021</p>
+  </footer>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Uma nave que carregava informações sobre a humanidade
+como: musicas famosas, uma menssagem amigavel em todos os idiomas
+a nave está seguindo um rumo ao espaço e ja saiu de nosso sistema solar
+
+utilizando pull request..
+e git pull origin

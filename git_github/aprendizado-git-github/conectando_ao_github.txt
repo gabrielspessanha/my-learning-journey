@@ -1,0 +1,1 @@
+aprendi como conectar meu repositorio local com o repositorio do git e sincronizar meu arquivos com o uso do git pull origin < nome da branch>

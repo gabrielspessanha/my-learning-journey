@@ -1,0 +1,11 @@
+const fs = require('node:fs')
+const createNewDocument = require('./write-file')
+const showFile = require('./read-file')
+const deleteDocFile = require('./delete-file')
+const updateFile = require("./update-file")
+
+createNewDocument("Criando novo arquivo! \nCriado com modulo fs do NodeJs ")
+showFile()
+updateFile("\nArquivo atualizado")
+showFile()
+deleteDocFile("meuarquivo.txt")
